@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Диаграмма классов — Учёт личных финансов</title>
+<style>
+  body { margin:0; font-family:'Segoe UI',Arial,sans-serif; background:#f7f8fb; color:#1f2937; }
+  header { background:#4f46e5; color:#fff; padding:18px 28px; }
+  header h1 { margin:0; font-size:20px; }
+  header p { margin:4px 0 0; color:#c7d2fe; font-size:13px; }
+  .wrap { padding:24px; }
+  .card { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:16px; overflow:auto; }
+  svg { width:100%; height:720px; display:block; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Диаграмма классов — «Учёт личных финансов»</h1>
+  <p>Моргунова Полина · слои: Модели · Контроллер · Сервисы · Формы</p>
+</header>
+<div class="wrap">
+  <div class="card">
+<svg width="1149pt" height="815pt"
+ viewBox="0.00 0.00 1149.00 815.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 811)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-811 1145,-811 1145,4 -4,4"/>
+<g id="clust1" class="cluster">
+<path fill="white" stroke="#cfd8dc" d="M20,-8C20,-8 669,-8 669,-8 675,-8 681,-14 681,-20 681,-20 681,-298 681,-298 681,-304 675,-310 669,-310 669,-310 20,-310 20,-310 14,-310 8,-304 8,-298 8,-298 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="344.5" y="-294.8" font-family="DejaVu Sans Bold" font-size="14.00">Models</text>
+</g>
+<g id="clust2" class="cluster">
+<path fill="white" stroke="#cfd8dc" d="M714,-163.5C714,-163.5 1121,-163.5 1121,-163.5 1127,-163.5 1133,-169.5 1133,-175.5 1133,-175.5 1133,-259.5 1133,-259.5 1133,-265.5 1127,-271.5 1121,-271.5 1121,-271.5 714,-271.5 714,-271.5 708,-271.5 702,-265.5 702,-259.5 702,-259.5 702,-175.5 702,-175.5 702,-169.5 708,-163.5 714,-163.5"/>
+<text text-anchor="middle" x="917.5" y="-256.3" font-family="DejaVu Sans Bold" font-size="14.00">Services</text>
+</g>
+<g id="clust3" class="cluster">
+<path fill="white" stroke="#cfd8dc" d="M423,-619C423,-619 746,-619 746,-619 752,-619 758,-625 758,-631 758,-631 758,-787 758,-787 758,-793 752,-799 746,-799 746,-799 423,-799 423,-799 417,-799 411,-793 411,-787 411,-787 411,-631 411,-631 411,-625 417,-619 423,-619"/>
+<text text-anchor="middle" x="584.5" y="-783.8" font-family="DejaVu Sans Bold" font-size="14.00">Forms (View)</text>
+</g>
+<g id="node1" class="node">
+<polygon fill="#f5f7fa" stroke="#90a4ae" points="16,-133.5 16,-278.5 156,-278.5 156,-133.5 16,-133.5"/>
+<text text-anchor="middle" x="86" y="-266.5" font-family="DejaVu Sans" font-size="10.00">Transaction</text>
+<polyline fill="none" stroke="#90a4ae" points="16,-259.5 156,-259.5 "/>
+<text text-anchor="start" x="24" y="-247.5" font-family="DejaVu Sans" font-size="10.00">+ Id : int</text>
+<text text-anchor="start" x="24" y="-236.5" font-family="DejaVu Sans" font-size="10.00">+ Date : DateTime</text>
+<text text-anchor="start" x="24" y="-225.5" font-family="DejaVu Sans" font-size="10.00">+ Amount : decimal</text>
+<text text-anchor="start" x="24" y="-214.5" font-family="DejaVu Sans" font-size="10.00">+ Type : TransactionType</text>
+<text text-anchor="start" x="24" y="-203.5" font-family="DejaVu Sans" font-size="10.00">+ CategoryId : int</text>
+<text text-anchor="start" x="24" y="-192.5" font-family="DejaVu Sans" font-size="10.00">+ AccountId : int</text>
+<text text-anchor="start" x="24" y="-181.5" font-family="DejaVu Sans" font-size="10.00">+ Description : string</text>
+<text text-anchor="start" x="24" y="-170.5" font-family="DejaVu Sans" font-size="10.00">+ CreatedAt : DateTime</text>
+<polyline fill="none" stroke="#90a4ae" points="16,-163.5 156,-163.5 "/>
+<text text-anchor="start" x="24" y="-151.5" font-family="DejaVu Sans" font-size="10.00">+ DisplayAmount : string</text>
+<text text-anchor="start" x="24" y="-140.5" font-family="DejaVu Sans" font-size="10.00">+ AmountColor : Color</text>
+</g>
+<g id="node5" class="node">
+<polygon fill="#fff8e1" stroke="#90a4ae" points="194.5,-16.5 194.5,-65.5 331.5,-65.5 331.5,-16.5 194.5,-16.5"/>
+<text text-anchor="middle" x="263" y="-53.5" font-family="DejaVu Sans" font-size="10.00">«enum» TransactionType</text>
+<polyline fill="none" stroke="#90a4ae" points="194.5,-46.5 331.5,-46.5 "/>
+<text text-anchor="start" x="202.5" y="-34.5" font-family="DejaVu Sans" font-size="10.00">Income</text>
+<text text-anchor="start" x="202.5" y="-23.5" font-family="DejaVu Sans" font-size="10.00">Expense</text>
+</g>
+<g id="edge6" class="edge">
+<path fill="none" stroke="#607d8b" stroke-dasharray="5,2" d="M156.21,-140.34C181.54,-117.01 208.97,-91.76 229.68,-72.68"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="237.27,-65.69 232.96,-75.78 233.59,-69.08 229.92,-72.47 229.92,-72.47 229.92,-72.47 233.59,-69.08 226.87,-69.16 237.27,-65.69 237.27,-65.69"/>
+</g>
+<g id="node2" class="node">
+<polygon fill="#f5f7fa" stroke="#90a4ae" points="192.5,-165 192.5,-247 335.5,-247 335.5,-165 192.5,-165"/>
+<text text-anchor="middle" x="264" y="-235" font-family="DejaVu Sans" font-size="10.00">Account</text>
+<polyline fill="none" stroke="#90a4ae" points="192.5,-228 335.5,-228 "/>
+<text text-anchor="start" x="200.5" y="-216" font-family="DejaVu Sans" font-size="10.00">+ Id : int</text>
+<text text-anchor="start" x="200.5" y="-205" font-family="DejaVu Sans" font-size="10.00">+ Name : string</text>
+<text text-anchor="start" x="200.5" y="-194" font-family="DejaVu Sans" font-size="10.00">+ Balance : decimal</text>
+<text text-anchor="start" x="200.5" y="-183" font-family="DejaVu Sans" font-size="10.00">+ InitialBalance : decimal</text>
+<text text-anchor="start" x="200.5" y="-172" font-family="DejaVu Sans" font-size="10.00">+ AccountType : string</text>
+</g>
+<g id="node3" class="node">
+<polygon fill="#f5f7fa" stroke="#90a4ae" points="371.5,-170.5 371.5,-241.5 508.5,-241.5 508.5,-170.5 371.5,-170.5"/>
+<text text-anchor="middle" x="440" y="-229.5" font-family="DejaVu Sans" font-size="10.00">Category</text>
+<polyline fill="none" stroke="#90a4ae" points="371.5,-222.5 508.5,-222.5 "/>
+<text text-anchor="start" x="379.5" y="-210.5" font-family="DejaVu Sans" font-size="10.00">+ Id : int</text>
+<text text-anchor="start" x="379.5" y="-199.5" font-family="DejaVu Sans" font-size="10.00">+ Name : string</text>
+<text text-anchor="start" x="379.5" y="-188.5" font-family="DejaVu Sans" font-size="10.00">+ Type : TransactionType</text>
+<text text-anchor="start" x="379.5" y="-177.5" font-family="DejaVu Sans" font-size="10.00">+ Color : string</text>
+</g>
+<g id="edge7" class="edge">
+<path fill="none" stroke="#607d8b" stroke-dasharray="5,2" d="M402.46,-170.43C371.07,-141.52 326.7,-100.66 296.49,-72.84"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="288.76,-65.72 299.16,-69.18 292.43,-69.11 296.11,-72.49 296.11,-72.49 296.11,-72.49 292.43,-69.11 293.06,-75.8 288.76,-65.72 288.76,-65.72"/>
+</g>
+<g id="node4" class="node">
+<polygon fill="#f5f7fa" stroke="#90a4ae" points="545,-144.5 545,-267.5 673,-267.5 673,-144.5 545,-144.5"/>
+<text text-anchor="middle" x="609" y="-255.5" font-family="DejaVu Sans" font-size="10.00">Budget</text>
+<polyline fill="none" stroke="#90a4ae" points="545,-248.5 673,-248.5 "/>
+<text text-anchor="start" x="553" y="-236.5" font-family="DejaVu Sans" font-size="10.00">+ Id : int</text>
+<text text-anchor="start" x="553" y="-225.5" font-family="DejaVu Sans" font-size="10.00">+ CategoryId : int</text>
+<text text-anchor="start" x="553" y="-214.5" font-family="DejaVu Sans" font-size="10.00">+ Month : int</text>
+<text text-anchor="start" x="553" y="-203.5" font-family="DejaVu Sans" font-size="10.00">+ Year : int</text>
+<text text-anchor="start" x="553" y="-192.5" font-family="DejaVu Sans" font-size="10.00">+ Limit : decimal</text>
+<polyline fill="none" stroke="#90a4ae" points="545,-185.5 673,-185.5 "/>
+<text text-anchor="start" x="553" y="-173.5" font-family="DejaVu Sans" font-size="10.00">+ Spent : decimal</text>
+<text text-anchor="start" x="553" y="-162.5" font-family="DejaVu Sans" font-size="10.00">+ Remaining : decimal</text>
+<text text-anchor="start" x="553" y="-151.5" font-family="DejaVu Sans" font-size="10.00">+ PercentUsed : int</text>
+</g>
+<g id="node6" class="node">
+<polygon fill="#e3f2fd" stroke="#90a4ae" points="481,-361.5 481,-550.5 699,-550.5 699,-361.5 481,-361.5"/>
+<text text-anchor="middle" x="590" y="-538.5" font-family="DejaVu Sans" font-size="10.00">FinanceController</text>
+<polyline fill="none" stroke="#90a4ae" points="481,-531.5 699,-531.5 "/>
+<text text-anchor="start" x="489" y="-519.5" font-family="DejaVu Sans" font-size="10.00">- transactions : BindingList&lt;Transaction&gt;</text>
+<text text-anchor="start" x="489" y="-508.5" font-family="DejaVu Sans" font-size="10.00">- accounts : BindingList&lt;Account&gt;</text>
+<text text-anchor="start" x="489" y="-497.5" font-family="DejaVu Sans" font-size="10.00">- categories : BindingList&lt;Category&gt;</text>
+<text text-anchor="start" x="489" y="-486.5" font-family="DejaVu Sans" font-size="10.00">- budgets : List&lt;Budget&gt;</text>
+<text text-anchor="start" x="489" y="-475.5" font-family="DejaVu Sans" font-size="10.00">- undoStack / redoStack : Stack&lt;string&gt;</text>
+<polyline fill="none" stroke="#90a4ae" points="481,-468.5 699,-468.5 "/>
+<text text-anchor="start" x="489" y="-456.5" font-family="DejaVu Sans" font-size="10.00">+ AddTransaction()</text>
+<text text-anchor="start" x="489" y="-445.5" font-family="DejaVu Sans" font-size="10.00">+ UpdateTransaction()</text>
+<text text-anchor="start" x="489" y="-434.5" font-family="DejaVu Sans" font-size="10.00">+ DeleteTransaction()</text>
+<text text-anchor="start" x="489" y="-423.5" font-family="DejaVu Sans" font-size="10.00">+ SetBudget()</text>
+<text text-anchor="start" x="489" y="-412.5" font-family="DejaVu Sans" font-size="10.00">+ Undo() / Redo()</text>
+<text text-anchor="start" x="489" y="-401.5" font-family="DejaVu Sans" font-size="10.00">+ GenerateDemoData()</text>
+<text text-anchor="start" x="489" y="-390.5" font-family="DejaVu Sans" font-size="10.00">+ ExpensesByCategory()</text>
+<text text-anchor="start" x="489" y="-379.5" font-family="DejaVu Sans" font-size="10.00">+ MonthlyTotals()</text>
+<text text-anchor="start" x="489" y="-368.5" font-family="DejaVu Sans" font-size="10.00">+ TotalBalance()</text>
+</g>
+<g id="edge2" class="edge">
+<path fill="none" stroke="#607d8b" d="M480.7,-433.57C392.31,-412.49 267.61,-373.98 174,-310 164.49,-303.5 155.4,-295.71 146.91,-287.38"/>
+<polygon fill="none" stroke="#607d8b" points="146.66,-287.12 139.61,-285.61 138.29,-278.52 145.34,-280.03 146.66,-287.12"/>
+<text text-anchor="middle" x="196.5" y="-320.8" font-family="DejaVu Sans" font-size="9.00">*</text>
+</g>
+<g id="edge3" class="edge">
+<path fill="none" stroke="#607d8b" d="M480.78,-397.19C439.19,-372.85 392.56,-342.6 354,-310 335.49,-294.35 317.42,-274.8 302.4,-256.95"/>
+<polygon fill="none" stroke="#607d8b" points="302.02,-256.5 295.12,-254.42 294.38,-247.24 301.29,-249.32 302.02,-256.5"/>
+<text text-anchor="middle" x="373.5" y="-320.8" font-family="DejaVu Sans" font-size="9.00">*</text>
+</g>
+<g id="edge4" class="edge">
+<path fill="none" stroke="#607d8b" d="M533.29,-361.24C510.66,-323.82 485.65,-282.48 467.23,-252.03"/>
+<polygon fill="none" stroke="#607d8b" points="467.22,-252 460.69,-248.94 461.01,-241.73 467.54,-244.8 467.22,-252"/>
+<text text-anchor="middle" x="512.5" y="-320.8" font-family="DejaVu Sans" font-size="9.00">*</text>
+</g>
+<g id="edge5" class="edge">
+<path fill="none" stroke="#607d8b" d="M597.18,-361.24C599.24,-334.37 601.46,-305.47 603.4,-280.04"/>
+<polygon fill="none" stroke="#607d8b" points="603.42,-279.82 599.89,-273.53 604.34,-267.86 607.87,-274.14 603.42,-279.82"/>
+<text text-anchor="middle" x="602.5" y="-320.8" font-family="DejaVu Sans" font-size="9.00">*</text>
+</g>
+<g id="node7" class="node">
+<polygon fill="#e8f5e9" stroke="#90a4ae" points="709.5,-172 709.5,-240 798.5,-240 798.5,-172 709.5,-172"/>
+<text text-anchor="middle" x="754" y="-228" font-family="DejaVu Sans" font-size="10.00">DataService</text>
+<polyline fill="none" stroke="#90a4ae" points="709.5,-221 798.5,-221 "/>
+<text text-anchor="start" x="717.5" y="-209" font-family="DejaVu Sans" font-size="10.00">- folder : string</text>
+<polyline fill="none" stroke="#90a4ae" points="709.5,-202 798.5,-202 "/>
+<text text-anchor="start" x="717.5" y="-190" font-family="DejaVu Sans" font-size="10.00">+ Load&lt;T&gt;()</text>
+<text text-anchor="start" x="717.5" y="-179" font-family="DejaVu Sans" font-size="10.00">+ Save&lt;T&gt;()</text>
+</g>
+<g id="edge1" class="edge">
+<path fill="none" stroke="#607d8b" d="M655.48,-361.45C667.12,-344.43 679.03,-326.76 690,-310 703.04,-290.08 717.05,-267.66 728.63,-248.84"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="731.69,-250.54 733.93,-240.19 725.72,-246.88 731.69,-250.54"/>
+<text text-anchor="middle" x="692.5" y="-320.8" font-family="DejaVu Sans" font-size="9.00">uses</text>
+</g>
+<g id="node8" class="node">
+<polygon fill="#e8f5e9" stroke="#90a4ae" points="835,-187 835,-225 961,-225 961,-187 835,-187"/>
+<text text-anchor="middle" x="898" y="-213" font-family="DejaVu Sans" font-size="10.00">«static» ExportService</text>
+<polyline fill="none" stroke="#90a4ae" points="835,-206 961,-206 "/>
+<text text-anchor="start" x="843" y="-194" font-family="DejaVu Sans" font-size="10.00">+ SaveCsv()</text>
+</g>
+<g id="node9" class="node">
+<polygon fill="#e8f5e9" stroke="#90a4ae" points="997.5,-187 997.5,-225 1124.5,-225 1124.5,-187 997.5,-187"/>
+<text text-anchor="middle" x="1061" y="-213" font-family="DejaVu Sans" font-size="10.00">«static» ReportService</text>
+<polyline fill="none" stroke="#90a4ae" points="997.5,-206 1124.5,-206 "/>
+<text text-anchor="start" x="1005.5" y="-194" font-family="DejaVu Sans" font-size="10.00">+ ShowPreview()</text>
+</g>
+<g id="node10" class="node">
+<polygon fill="#f3e5f5" stroke="#90a4ae" points="681.5,-731.5 681.5,-767.5 746.5,-767.5 746.5,-731.5 681.5,-731.5"/>
+<text text-anchor="middle" x="714" y="-747" font-family="DejaVu Sans" font-size="10.00">MainForm</text>
+</g>
+<g id="edge8" class="edge">
+<path fill="none" stroke="#607d8b" d="M730.5,-731.22C752.2,-706.3 785.63,-658.88 768,-619 754.32,-588.04 731.47,-560.46 706.63,-537.21"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="708.97,-534.6 699.22,-530.45 704.25,-539.78 708.97,-534.6"/>
+<text text-anchor="middle" x="782.5" y="-643.3" font-family="DejaVu Sans" font-size="9.00">uses</text>
+</g>
+<g id="edge12" class="edge">
+<path fill="none" stroke="#607d8b" stroke-dasharray="5,2" d="M743.1,-731.28C756.35,-722.48 771.59,-710.9 783,-698 794.47,-685.03 795.93,-680.21 802,-664 860.28,-508.38 886.78,-308.98 895.02,-235.68"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="896.15,-225.41 899.53,-235.84 895.61,-230.38 895.06,-235.35 895.06,-235.35 895.06,-235.35 895.61,-230.38 890.59,-234.86 896.15,-225.41 896.15,-225.41"/>
+</g>
+<g id="edge13" class="edge">
+<path fill="none" stroke="#607d8b" stroke-dasharray="5,2" d="M746.72,-735.78C766.63,-727.05 791.82,-714.13 811,-698 825.56,-685.76 826.99,-680.17 837,-664 932.94,-509.01 1019.72,-307.05 1049.8,-234.46"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="1053.66,-225.1 1054.01,-236.06 1051.75,-229.72 1049.85,-234.34 1049.85,-234.34 1049.85,-234.34 1051.75,-229.72 1045.69,-232.63 1053.66,-225.1 1053.66,-225.1"/>
+</g>
+<g id="node11" class="node">
+<polygon fill="#f3e5f5" stroke="#90a4ae" points="418.5,-627.5 418.5,-663.5 515.5,-663.5 515.5,-627.5 418.5,-627.5"/>
+<text text-anchor="middle" x="467" y="-643" font-family="DejaVu Sans" font-size="10.00">TransactionForm</text>
+</g>
+<g id="edge14" class="edge">
+<path fill="none" stroke="#607d8b" stroke-dasharray="5,2" d="M681.46,-735.06C639.7,-717.82 566.82,-687.72 517.75,-667.46"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="508.27,-663.54 519.23,-663.2 512.89,-665.45 517.51,-667.36 517.51,-667.36 517.51,-667.36 512.89,-665.45 515.79,-671.52 508.27,-663.54 508.27,-663.54"/>
+</g>
+<g id="node12" class="node">
+<polygon fill="#f3e5f5" stroke="#90a4ae" points="552,-627.5 552,-663.5 628,-663.5 628,-627.5 552,-627.5"/>
+<text text-anchor="middle" x="590" y="-643" font-family="DejaVu Sans" font-size="10.00">BudgetForm</text>
+</g>
+<g id="edge15" class="edge">
+<path fill="none" stroke="#607d8b" stroke-dasharray="5,2" d="M693.25,-731.43C672.86,-714.66 641.58,-688.93 618.8,-670.19"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="610.82,-663.63 621.4,-666.51 614.68,-666.8 618.55,-669.98 618.55,-669.98 618.55,-669.98 614.68,-666.8 615.69,-673.46 610.82,-663.63 610.82,-663.63"/>
+</g>
+<g id="node13" class="node">
+<polygon fill="#f3e5f5" stroke="#90a4ae" points="664,-627.5 664,-663.5 750,-663.5 750,-627.5 664,-627.5"/>
+<text text-anchor="middle" x="707" y="-643" font-family="DejaVu Sans" font-size="10.00">StatisticsForm</text>
+</g>
+<g id="edge16" class="edge">
+<path fill="none" stroke="#607d8b" stroke-dasharray="5,2" d="M712.81,-731.2C711.73,-715.42 710.11,-691.86 708.86,-673.59"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="708.17,-663.55 713.34,-673.22 708.51,-668.54 708.85,-673.52 708.85,-673.52 708.85,-673.52 708.51,-668.54 704.37,-673.83 708.17,-663.55 708.17,-663.55"/>
+</g>
+<g id="edge9" class="edge">
+<path fill="none" stroke="#607d8b" d="M478.35,-627.2C488.92,-611.08 505.61,-585.64 522.9,-559.29"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="525.96,-561 528.52,-550.72 520.11,-557.16 525.96,-561"/>
+<text text-anchor="middle" x="513.5" y="-586.8" font-family="DejaVu Sans" font-size="9.00">uses</text>
+</g>
+<g id="edge10" class="edge">
+<path fill="none" stroke="#607d8b" d="M590,-627.2C590,-611.43 590,-586.74 590,-561"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="593.5,-560.72 590,-550.72 586.5,-560.72 593.5,-560.72"/>
+<text text-anchor="middle" x="600.5" y="-586.8" font-family="DejaVu Sans" font-size="9.00">uses</text>
+</g>
+<g id="edge11" class="edge">
+<path fill="none" stroke="#607d8b" d="M696.2,-627.2C686.15,-611.08 670.27,-585.64 653.83,-559.29"/>
+<polygon fill="#607d8b" stroke="#607d8b" points="656.74,-557.35 648.48,-550.72 650.8,-561.05 656.74,-557.35"/>
+<text text-anchor="middle" x="682.5" y="-586.8" font-family="DejaVu Sans" font-size="9.00">uses</text>
+</g>
+</g>
+</svg>
+  </div>
+</div>
+</body>
+</html>

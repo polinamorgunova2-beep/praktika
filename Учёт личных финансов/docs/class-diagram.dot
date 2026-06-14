@@ -1,0 +1,56 @@
+digraph FinanceTracker {
+  graph [fontname="DejaVu Sans", rankdir=TB, splines=true, nodesep=0.5, ranksep=0.9, bgcolor="white"];
+  node  [fontname="DejaVu Sans", shape=record, fontsize=10, style="filled", fillcolor="#F5F7FA", color="#90A4AE"];
+  edge  [fontname="DejaVu Sans", fontsize=9, color="#607D8B"];
+
+  /* ----- Модели ----- */
+  subgraph cluster_models {
+    label="Models"; color="#CFD8DC"; style="rounded"; fontname="DejaVu Sans Bold";
+    Transaction [label="{Transaction|+ Id : int\l+ Date : DateTime\l+ Amount : decimal\l+ Type : TransactionType\l+ CategoryId : int\l+ AccountId : int\l+ Description : string\l+ CreatedAt : DateTime\l|+ DisplayAmount : string\l+ AmountColor : Color\l}"];
+    Account     [label="{Account|+ Id : int\l+ Name : string\l+ Balance : decimal\l+ InitialBalance : decimal\l+ AccountType : string\l}"];
+    Category    [label="{Category|+ Id : int\l+ Name : string\l+ Type : TransactionType\l+ Color : string\l}"];
+    Budget      [label="{Budget|+ Id : int\l+ CategoryId : int\l+ Month : int\l+ Year : int\l+ Limit : decimal\l|+ Spent : decimal\l+ Remaining : decimal\l+ PercentUsed : int\l}"];
+    TransactionType [label="{«enum» TransactionType|Income\lExpense\l}", fillcolor="#FFF8E1"];
+  }
+
+  /* ----- Контроллер ----- */
+  FinanceController [label="{FinanceController|- transactions : BindingList\<Transaction\>\l- accounts : BindingList\<Account\>\l- categories : BindingList\<Category\>\l- budgets : List\<Budget\>\l- undoStack / redoStack : Stack\<string\>\l|+ AddTransaction()\l+ UpdateTransaction()\l+ DeleteTransaction()\l+ SetBudget()\l+ Undo() / Redo()\l+ GenerateDemoData()\l+ ExpensesByCategory()\l+ MonthlyTotals()\l+ TotalBalance()\l}", fillcolor="#E3F2FD"];
+
+  /* ----- Сервисы ----- */
+  subgraph cluster_services {
+    label="Services"; color="#CFD8DC"; style="rounded"; fontname="DejaVu Sans Bold";
+    DataService   [label="{DataService|- folder : string\l|+ Load\<T\>()\l+ Save\<T\>()\l}", fillcolor="#E8F5E9"];
+    ExportService [label="{«static» ExportService|+ SaveCsv()\l}", fillcolor="#E8F5E9"];
+    ReportService [label="{«static» ReportService|+ ShowPreview()\l}", fillcolor="#E8F5E9"];
+  }
+
+  /* ----- Формы ----- */
+  subgraph cluster_forms {
+    label="Forms (View)"; color="#CFD8DC"; style="rounded"; fontname="DejaVu Sans Bold";
+    MainForm        [label="{MainForm}", fillcolor="#F3E5F5"];
+    TransactionForm [label="{TransactionForm}", fillcolor="#F3E5F5"];
+    BudgetForm      [label="{BudgetForm}", fillcolor="#F3E5F5"];
+    StatisticsForm  [label="{StatisticsForm}", fillcolor="#F3E5F5"];
+  }
+
+  /* ----- Связи ----- */
+  FinanceController -> DataService [label="uses"];
+  FinanceController -> Transaction [arrowhead=odiamond, label="*"];
+  FinanceController -> Account     [arrowhead=odiamond, label="*"];
+  FinanceController -> Category    [arrowhead=odiamond, label="*"];
+  FinanceController -> Budget      [arrowhead=odiamond, label="*"];
+
+  Transaction -> TransactionType [arrowhead=vee, style=dashed];
+  Category    -> TransactionType [arrowhead=vee, style=dashed];
+
+  MainForm        -> FinanceController [label="uses"];
+  TransactionForm -> FinanceController [label="uses"];
+  BudgetForm      -> FinanceController [label="uses"];
+  StatisticsForm  -> FinanceController [label="uses"];
+
+  MainForm -> ExportService [arrowhead=vee, style=dashed];
+  MainForm -> ReportService [arrowhead=vee, style=dashed];
+  MainForm -> TransactionForm [arrowhead=vee, style=dashed];
+  MainForm -> BudgetForm [arrowhead=vee, style=dashed];
+  MainForm -> StatisticsForm [arrowhead=vee, style=dashed];
+}

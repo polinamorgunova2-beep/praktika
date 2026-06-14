@@ -1,0 +1,13 @@
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\bin\Debug\net472\FinanceTracker.exe.config
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\bin\Debug\net472\FinanceTracker.exe
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\bin\Debug\net472\FinanceTracker.pdb
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\bin\Debug\net472\Newtonsoft.Json.dll
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\obj\Debug\net472\FinanceTracker.csproj.AssemblyReference.cache
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\obj\Debug\net472\FinanceTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\obj\Debug\net472\FinanceTracker.AssemblyInfoInputs.cache
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\obj\Debug\net472\FinanceTracker.AssemblyInfo.cs
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\obj\Debug\net472\FinanceTracker.csproj.CoreCompileInputs.cache
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\obj\Debug\net472\FinanceT.7E14CD64.Up2Date
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\obj\Debug\net472\FinanceTracker.exe
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\obj\Debug\net472\FinanceTracker.pdb
+C:\Users\123\Desktop\пп\Полина\Учёт личных финансов\bin\Debug\net472\docs\Диаграмма-классов.html
